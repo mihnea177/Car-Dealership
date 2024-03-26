@@ -1,0 +1,18 @@
+session_start();
+
+
+
+  
+  
+
+
+
+    $maxval = "";
+    $dotare = "";
+    #$descriere = "";
+
+    $db = mysqli_connect('localhost', 'root', '', 'ProiectBD');
+    $query = "SELECT * FROM Masini ORDER BY MasinaID DESC LIMIT 1";
+    $result = mysqli_query($db, $query);
+    $masina = mysqli_fetch_assoc($result);
+    $maxval = $masina['MasinaID'];
